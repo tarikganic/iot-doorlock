@@ -1,0 +1,110 @@
+body{
+    display:flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.house{
+    display: flex;
+    width: 100vw;
+    height: 70vh;
+    align-items: end;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='800' preserveAspectRatio='none' viewBox='0 0 1440 800'%3e%3cg mask='url(%26quot%3b%23SvgjsMask3609%26quot%3b)' fill='none'%3e%3crect width='1440' height='800' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient3610%26quot%3b)'%3e%3c/rect%3e%3cpath d='M54 800L854 0L1532 0L732 800z' fill='url(%26quot%3b%23SvgjsLinearGradient3611%26quot%3b)'%3e%3c/path%3e%3cpath d='M527.2 800L1327.2 0L1514.7 0L714.7 800z' fill='url(%26quot%3b%23SvgjsLinearGradient3611%26quot%3b)'%3e%3c/path%3e%3cpath d='M1405 800L605 0L459.5 0L1259.5 800z' fill='url(%26quot%3b%23SvgjsLinearGradient3612%26quot%3b)'%3e%3c/path%3e%3cpath d='M930.8 800L130.79999999999995 0L-82.20000000000005 0L717.8 800z' fill='url(%26quot%3b%23SvgjsLinearGradient3612%26quot%3b)'%3e%3c/path%3e%3cpath d='M772.142887486357 800L1440 132.14288748635704L1440 800z' fill='url(%26quot%3b%23SvgjsLinearGradient3611%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 800L667.857112513643 800L 0 132.14288748635704z' fill='url(%26quot%3b%23SvgjsLinearGradient3612%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask3609'%3e%3crect width='1440' height='800' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='50%25' y1='100%25' x2='50%25' y2='0%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient3610'%3e%3cstop stop-color='rgba(92%2c 133%2c 174%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(255%2c 250%2c 242%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient3611'%3e%3cstop stop-color='rgba(255%2c 255%2c 255%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(255%2c 255%2c 255%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient3612'%3e%3cstop stop-color='rgba(255%2c 255%2c 255%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(255%2c 255%2c 255%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.backDoor
+{
+  background-image: url("hallway.png");
+  background-size: cover;
+  border-top: 15px solid #db9b7b;
+  border-left: 15px solid #db9b7b;
+  border-right: 15px solid #db9b7b;
+  border-bottom: none;
+  position:relative;
+  width:274px;
+  height:556px; 
+  margin: 0 auto;
+  margin-top:50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-clip: content-box;
+}
+
+.door
+{
+  background-image: url("door.png");
+  background-size: cover;
+  position:block;
+  top:0px;
+  left:0px;
+  width:274px;
+  height:556px;
+ 
+  transform-origin: left;
+  /*Speed of the Door animation*/
+  transition: all 0.5s ease-in-out;
+}
+
+.doorOpen
+{
+  /*prespectiv creates the door open effect*/
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+
+.pathwalk{
+    height: 30vh;
+    width: 100vw;
+    background-image: url(floor.jpg);
+}
+
+.popup {
+  display: flex;
+  font-family: Ubuntu, sans-serif;
+  font-size: 27px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  padding: 40px;
+  background-color: rgba(90, 146, 168, 0.76);
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup p {
+  margin-bottom: 20px;
+}
+
+.popup-button {
+  font-size: 20px;
+  font-weight: 700;
+  width: 100px;
+  margin: 5px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 14px;
+  background-color: #fdfdfd;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
+}
+
+.popup-button:hover {
+  background-color: rgba(90, 146, 168, 0.76);
+  box-shadow: rgb(255, 255, 255) 0px 3px 8px;
+  border: 0px solid rgb(255, 255, 255);
+}
+
+
+
+
